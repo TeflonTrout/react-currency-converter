@@ -4,6 +4,8 @@ import CurrencyRow from './CurrencyRow'
 
 const BASE_URL = 'https://api.exchangeratesapi.io/latest'
 
+// Functional component that translates the current currency
+// to the chosen currency in real time
 
 function App() {
   const [currencyOptions, setCurrencyOptions] = useState([])
@@ -22,6 +24,8 @@ function App() {
     fromAmount = amount / exchangeRate
   }
 
+  // Updates the API fetch
+  
   useEffect(() => {
     fetch(BASE_URL)
       .then(res => res.json())

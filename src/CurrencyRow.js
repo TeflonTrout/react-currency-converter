@@ -1,5 +1,7 @@
 import React from 'react'
 
+// Functional component that returns the UI and maps the currency
+
 export default function CurrencyRow(props) {
     const {
         currencyOptions,
